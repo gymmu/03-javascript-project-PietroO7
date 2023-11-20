@@ -68,6 +68,8 @@ export function aufgabe01 (args) {
     if (currentElement === ' '){
     count = count + 1
     }
+    
+
   }
     return count
   }
@@ -114,21 +116,68 @@ else {
   return result.join("")
 }
 
+export function aufgabe09 (args) {
+  const input = args
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+    len++
+    
+  }
+
+  if (len === 6) {
+    return true
+  } else {
+    return false
+  }
+}
+
+export function aufgabe11 (args) {
+  const input = args
+  const result = []
+  let ascii = -1
+
+  if (input.length > 1){
+    return null
+  }
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    ascii = currentElement.charCodeAt(0)
+    return ascii
+  }
+  return null
+}
 
 export function aufgabe12 (args) {
   const input = args
   const result = []
- let count = 0
+
+ let pos = -1
   
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    pos = pos + 1
+    if (currentElement === "e") {
+      return i
+    }
   }
 
-  if (currentElement = 'e') {
+  return -1
+}
+
+
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+
+let positionOfLastE = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
     
+    if (currentElement === "e") {
+      positionOfLastE = i
+    }
   }
-
-
 
   return -1
 }
