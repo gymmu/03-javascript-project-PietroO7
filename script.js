@@ -59,7 +59,7 @@ export function aufgabe01 (args) {
   export function aufgabe04 (args) {
     const input = args
     const result = []
-    let count = 0
+    let count = 1
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
@@ -68,6 +68,7 @@ export function aufgabe01 (args) {
     if (currentElement === ' '){
     count = count + 1
     }
+    
     
 
   }
@@ -82,22 +83,17 @@ export function aufgabe01 (args) {
     for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
      
-    //prüft ob es einen Grossbuchstaben gibt
-    if (currentElement=== ".") {}
-    else if (currentElement===" "){}
-     
-    //wenn ein Element gleich ist, dann rechnet es plus 1.
-    else if (currentElement === currentElement.toUpperCase())
-    {capitalLetters++}
-    }
-     
-    if (capitalLetters > 0) {
+    const asciiCode = currentElement.charCodeAt(0);
+    if(
+      (asciiCode >= 65 && asciiCode <= 90 )
+    ) {
       return true
-    } else {
-       return false
     }
-     
-    }
+  }
+
+  return false
+
+}
 
 
 export function aufgabe08 (args) {
@@ -129,6 +125,16 @@ export function aufgabe09 (args) {
   } else {
     return false
   }
+}
+
+
+export function aufgabe10 (args) {
+  const input = args
+  const result = []
+
+  
+  
+  return result.join("")
 }
 
 export function aufgabe11 (args) {
@@ -181,3 +187,5 @@ let positionOfLastE = -1
 
   return -1
 }
+
+
