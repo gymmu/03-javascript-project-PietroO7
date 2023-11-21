@@ -55,25 +55,23 @@ export function aufgabe01 (args) {
   }
 
 
-
-  export function aufgabe04 (args) {
-    const input = args
-    const result = []
-    let count = 1
-
+  export function aufgabe04(args) {
+    const input = args;
+    let count = 0;
+  
     for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-    
-    //Sollen alle Leerzeichen zählen
-    if (currentElement === ' '){
-    count = count + 1
+      const currentElement = input[i];
+  
+      // Check if the current character is a space
+      if (currentElement === ' ') {
+        count = count + 1;
+      }
     }
-    
-    
+  
+    return count;
+  }
 
-  }
-    return count
-  }
+
   export function aufgabe05(args) {
     const input = args
       const result = []
@@ -95,6 +93,8 @@ export function aufgabe01 (args) {
 
 }
 
+
+func
 
 export function aufgabe08 (args) {
   const input = args
@@ -128,22 +128,28 @@ export function aufgabe09 (args) {
 }
 
 
-export function aufgabe10 (args) {
-  const input = args
-  
-  if (input.length !== 7) return false
-  if (input[0] !== "#") return false
+export function aufgabe10(args) {
+  const input = args;
 
-  for (let i = 1 ; i < input.length; i++) {
-    const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
+  if (input.length !== 7) return false;
+  if (input[0] !== "#") return false;
+
+  for (let i = 1; i < input.length; i++) {
+    const currentElement = input[i];
+    const ascii = currentElement.charCodeAt(0);
+
     if (48 <= ascii && ascii <= 57) {
-    } else if (65 <= ascii && ascii <= 70 ){
+    
+    } else if (65 <= ascii && ascii <= 70) {
+      
     } else {
-      return false
-    }
+    
+      return false;
     }
   }
+  return true;
+}
+
 
   export function aufgabe11 (args) {
   const input = args
@@ -163,6 +169,7 @@ export function aufgabe10 (args) {
 
 export function aufgabe12(args) {
   const input = args;
+  const result = []
   let pos = -1;
 
   for (let i = 0; i < input.length; i++) {
@@ -170,29 +177,27 @@ export function aufgabe12(args) {
     pos = pos + 2;
 
     if (currentElement === "e") {
-      return pos; 
+      return i
     }
   }
 
   return -1;
 }
 
-
-export function aufgabe13 (args) {
-  const input = args
-  const result = []
-
-let positionOfLastE = -1
+export function aufgabe13(args) {
+  const input = args;
+  let positionOfLastE = -1;
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    
+    const currentElement = input[i];
+
     if (currentElement === "e") {
-      positionOfLastE = i
+      positionOfLastE = i;
     }
   }
 
-  return -1
+  return positionOfLastE;
 }
+
 
 
