@@ -230,20 +230,22 @@ export function aufgabe13(args) {
   return positionOfLastE;
 }
 
+
 export function aufgabe14(args) {
   const input = args;
-  const result = []
-  let pos = -1;
+  let count = 0;
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i];
-    pos = pos + 2;
 
     if (currentElement === "e") {
-      return i
+      count = count + 1;
+
+      if (count === 3) {
+        return i;
+      }
     }
   }
 
   return -1;
 }
-
