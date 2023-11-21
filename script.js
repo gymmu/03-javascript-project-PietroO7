@@ -94,7 +94,38 @@ export function aufgabe01 (args) {
 }
 
 
-func
+export function aufgabe06 (args) {
+    const input = args
+      const result = []
+    let capitalLetters = 0
+     
+     
+    for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+     
+    const asciiCode = currentElement.charCodeAt(0);
+    if(
+(asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
+  || asciiCode >= 91 && asciiCode <= 96 || asciiCode >= 123 )
+    ) {
+      return true
+    } 
+  }
+  return false
+}
+
+
+export function aufgabe07 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
 
 export function aufgabe08 (args) {
   const input = args
@@ -199,5 +230,20 @@ export function aufgabe13(args) {
   return positionOfLastE;
 }
 
+export function aufgabe14(args) {
+  const input = args;
+  const result = []
+  let pos = -1;
 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    pos = pos + 2;
+
+    if (currentElement === "e") {
+      return i
+    }
+  }
+
+  return -1;
+}
 
