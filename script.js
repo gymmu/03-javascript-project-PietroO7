@@ -161,20 +161,20 @@ export function aufgabe10 (args) {
   return null
 }
 
-export function aufgabe12 (args) {
-  const input = args
-  const result = []
+export function aufgabe12(args) {
+  const input = args;
+  let pos = -1;
 
- let pos = -1
-  
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    pos = pos + 2
+    const currentElement = input[i];
+    pos = pos + 2;
+
     if (currentElement === "e") {
-      return i
+      return pos; 
     }
   }
-  return -1
+
+  return -1;
 }
 
 
