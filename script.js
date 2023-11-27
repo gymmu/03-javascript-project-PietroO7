@@ -306,5 +306,27 @@ export function aufgabe27(args) {
 }
 
 
+export function aufgabe24(args) {
+  const input = args;
+  const result = [];
+
+  // Überprüfe, ob die Eingabe mindestens ein Zeichen hat
+  if (input.length > 0) {
+    // Vertausche das erste und das letzte Zeichen
+    const firstChar = input[0];
+    const lastChar = input[input.length - 1];
+
+    result.push(lastChar);
+
+    // Füge die restlichen Zeichen (ohne das letzte) hinzu
+    for (let i = 1; i < input.length - 1; i++) {
+      result.push(input[i]);
+    }
+
+    result.push(firstChar);
+  }
+
+  return result.join('');
+}
 
 
