@@ -285,3 +285,26 @@ export function aufgabe19(args) {
 
   return result.join('');
 }
+
+export function aufgabe27(args) {
+  const input = args;
+  const result = [];
+
+  if (input.length === 0) return false;
+
+  for (let i = 0; i < input.length; i++) {
+    const currentChar = input[i];
+
+    // Überprüfe, ob das ASCII-Zeichen eine Zahl ist (zwischen 48 und 57)
+    const asciiCode = currentChar.charCodeAt(0);
+    if (asciiCode < 48 || asciiCode > 57) {
+      return false
+    }
+  }
+
+  return true
+}
+
+
+
+
