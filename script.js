@@ -251,3 +251,37 @@ export function aufgabe14(args) {
 }
 
 
+export function aufgabe15(args) {
+  const input = args;
+  const result = [];
+
+  for (let i = 0; i < input.length; i++) {
+    const currentChar = input[i];
+
+    // Schleife soll anhalten sobald wenn ein Leerzeichen auftritt
+    if (currentChar === ' ') {
+      break;
+    }
+
+    result.push(currentChar);
+  }
+
+  return result.join('');
+}
+
+
+
+
+export function aufgabe19(args) {
+  const input = args;
+  const result = [];
+
+  for (let i = 0; i < input.length; i++) {
+    const currentChar = input[i];
+    
+    // Füge jedes Zeichen zweimal hinzu
+    result.push(currentChar, currentChar);
+  }
+
+  return result.join('');
+}
