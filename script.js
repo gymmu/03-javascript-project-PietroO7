@@ -38,7 +38,6 @@ export function aufgabe01 (args) {
   }
   
 
-
   export function aufgabe03(args) {
     const input = args
     const result = []
@@ -90,9 +89,7 @@ export function aufgabe01 (args) {
       return true
     }
   }
-
   return false
-
 }
 
 
@@ -123,13 +120,13 @@ export function aufgabe07(args) {
  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //sollte ein und erkennen
+    //sollte ein "und" erkennen
     if (currentElement==="u")
       if (input[i+1]=== "n")
       if (input[i+2]=== "d") {
         return true
     }
-     //sollte ein Und erkennen
+     //sollte ein "Und" erkennen
     if (currentElement==="U")
       if (input[i+1]=== "n")
       if (input[i+2]=== "d") {
@@ -147,7 +144,9 @@ export function aufgabe08 (args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i] 
+    //prüfe ob das aktuelle Element ein "e" ist
  if (currentElement === "e") {
+  //wenn es eins dann ersetzte es mit einer "3"
   result.push("3")
  }
 else {
@@ -162,7 +161,6 @@ export function aufgabe09 (args) {
   let len = 0
   for (let i = 0; i < input.length; i++) {
     len++
-    
   }
 
   if (len === 6) {
@@ -212,6 +210,7 @@ export function aufgabe10(args) {
   return null
 }
 
+
 export function aufgabe12(args) {
   const input = args;
   const result = []
@@ -225,9 +224,9 @@ export function aufgabe12(args) {
       return i
     }
   }
-
   return -1;
 }
+
 
 export function aufgabe13(args) {
   const input = args;
@@ -260,7 +259,6 @@ export function aufgabe14(args) {
       }
     }
   }
-
   return -1;
 }
 
@@ -279,9 +277,20 @@ export function aufgabe15(args) {
 
     result.push(currentChar);
   }
-
   return result.join('');
 }
+
+
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
 
 export function aufgabe17(args) {
   const input = args;
@@ -301,6 +310,14 @@ export function aufgabe17(args) {
 }
 
 
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+
+
 export function aufgabe19(args) {
   const input = args;
   const result = [];
@@ -313,6 +330,51 @@ export function aufgabe19(args) {
   }
 
   return result.join('');
+}
+
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
+
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  
+}
+
+
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
+
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
 }
 
 
@@ -340,6 +402,26 @@ export function aufgabe24(args) {
 }
 
 
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
+
+export function aufgabe26 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
 
 export function aufgabe27(args) {
   const input = args;
@@ -358,4 +440,15 @@ export function aufgabe27(args) {
   }
 
   return true
+}
+
+
+export function aufgabe28 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
 }
