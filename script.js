@@ -325,10 +325,10 @@ export function aufgabe19(args) {
   const result = [];
 
   for (let i = 0; i < input.length; i++) {
-    const currentChar = input[i];
+    const currentElement = input[i];
     
     // Füge jedes Zeichen zweimal hinzu
-    result.push(currentChar, currentChar);
+    result.push(currentElement, currentElement);
   }
 
   return result.join('');
