@@ -104,7 +104,7 @@ export function aufgabe06 (args) {
      
     for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-     
+     //sollte ein SOnderzeichen erkennen mithilfe vom AsciiCode
     const asciiCode = currentElement.charCodeAt(0);
     if(
 (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
@@ -117,16 +117,28 @@ export function aufgabe06 (args) {
 }
 
 
-export function aufgabe07 (args) {
+export function aufgabe07(args) {
   const input = args
   const result = []
-  
+ 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+    //sollte ein und erkennen
+    if (currentElement==="u")
+      if (input[i+1]=== "n")
+      if (input[i+2]=== "d") {
+        return true
+    }
+     //sollte ein Und erkennen
+    if (currentElement==="U")
+      if (input[i+1]=== "n")
+      if (input[i+2]=== "d") {
+        return true
+    }
   }
-  return result.join("")
-}
+  return false
+ 
+  }
 
 
 export function aufgabe08 (args) {
