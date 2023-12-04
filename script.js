@@ -3,12 +3,15 @@ export function aufgabe01 (args) {
   const input = args
   const result = []
 
-  for (let i = 0; i < input.length; i++) {
+ for (let i = 0; i < input.length; i++) {
     const currentElement = input[i] 
+    //Wenn das aktuelle Zeichen "e" ist, hängt an die Liste an
  if (currentElement === "e") {
   result.push("")
+  //Wenn das aktuelle Zeichen ein "E" ist, hänge nichts an die Liste an
  } else if (currentElement === "E") {
   result.push("")
+  //Das aktuelle Zeichen ist weder ein "e" noch ein "E", hängt also das aktuelle Zeichen an
  } else {
   result.push(currentElement)
  }
@@ -34,6 +37,8 @@ export function aufgabe01 (args) {
   return result.join("")
   }
   
+
+
   export function aufgabe03(args) {
     const input = args
     const result = []
@@ -41,11 +46,10 @@ export function aufgabe01 (args) {
    
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      //Soll nur ein 'e' enthalten
+  //Soll nur ein 'e' enthalten
   if (currentElement === 'e'){
     count = count + 1
   }
-   
   // Soll grosses 'E' zählen
   else if (currentElement === 'E'){
     count = count + 1
@@ -61,8 +65,7 @@ export function aufgabe01 (args) {
   
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i];
-  
-      // Check if the current character is a space
+      // überprüfe ob das aktuelle Elemnt ein leerzeichen ist
       if (currentElement === ' ') {
         count = count + 1;
       }
@@ -76,11 +79,10 @@ export function aufgabe01 (args) {
     const input = args
       const result = []
     let capitalLetters = 0
-     
-     
+    
     for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-     
+     //Sollte einen Grossbuchstaben erkennen
     const asciiCode = currentElement.charCodeAt(0);
     if(
       (asciiCode >= 65 && asciiCode <= 90 )
@@ -269,7 +271,22 @@ export function aufgabe15(args) {
   return result.join('');
 }
 
-
+export function aufgabe17(args) {
+  const input = args;
+  const result = input.split(',')
+ 
+  
+  for (let i = 0; i < result.length - 1; i++) {
+    for (let j = 0; j < result.length - 1 - i; j++) {
+      if (result[j] > result[j + 1]) {
+        
+        [result[j], result[j + 1]] = [result[j + 1], result[j]]
+      }
+    }
+  }
+ 
+  return result.join(',')
+}
 
 
 export function aufgabe19(args) {
@@ -309,6 +326,7 @@ export function aufgabe24(args) {
 
   return result.join('');
 }
+
 
 
 export function aufgabe27(args) {
