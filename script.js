@@ -216,12 +216,12 @@ export function aufgabe10(args) {
 export function aufgabe12(args) {
   const input = args;
   const result = []
-  let pos = -1;
+  // zähle ab 
+ 
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i];
-    pos = pos + 2;
-
+    
     if (currentElement === "e") {
       return i
     }
