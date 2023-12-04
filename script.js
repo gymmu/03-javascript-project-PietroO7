@@ -162,7 +162,7 @@ export function aufgabe09 (args) {
   for (let i = 0; i < input.length; i++) {
     len++
   }
-
+//prüfe ob das aktuelle Elemnt 6 zeichen lang ist
   if (len === 6) {
     return true
   } else {
@@ -198,13 +198,15 @@ export function aufgabe10(args) {
   const input = args
   const result = []
   let ascii = -1
-
+//wenn das aktuelle Elemnt kleiner als 1 ist antworte null
   if (input.length > 1){
     return null
   }
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //finde den ascii code der aktuellen Elemntes
     ascii = currentElement.charCodeAt(0)
+    //gib den herausgefundenen Ascii zurück
     return ascii
   }
   return null
