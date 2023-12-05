@@ -254,14 +254,17 @@ export function aufgabe14(args) {
 
 for (let i = 0; i < input.length; i++) {
  const currentElement = input[i];
-
 if (currentElement === "e") {
-      count = count + 1;
+// Erhöhe den Zähler für "e".
+   count = count + 1;
+// Überprüfe, ob es das dritte "e" ist.
 if (count === 3) {
+// Gib die Position des dritten "e" zurück.
 return i;
  }
  }
  }
+// Falls es kein drittes "e" gibt, gib -1 zurück.
 return -1;
  }
 
@@ -296,6 +299,7 @@ result.push(currentElement);
  }
 
 
+ 
  export function aufgabe17(args) {
   const input = args;
   const result = input.split(',')
