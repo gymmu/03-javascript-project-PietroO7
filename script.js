@@ -170,15 +170,18 @@
 
  export function aufgabe10(args) {
   const input = args;
-
+//überprüfe ob die Eingabe nicht genau 7 Zeichen lang ist, Ja=False
  if (input.length !== 7) return false;
+ //überprüfe ob das erste Zeichen kein # ist Ja=False
  if (input[0] !== "#") return false;
 
  for (let i = 1; i < input.length; i++) {
   const currentElement = input[i];
+// Die ASCII-Wert des aktuellen Elements wird ermittelt
   const ascii = currentElement.charCodeAt(0);
-
+//mach nichts es ist eine Zahl
  if (48 <= ascii && ascii <= 57) {
+//mach nichts ist A-F
   } else if (65 <= ascii && ascii <= 70) {
   } else {
     return false;
