@@ -306,21 +306,41 @@ result.push(currentElement);
 
 
 
- export function aufgabe17(args) {
-  const input = args;
+[09:27] Gabrielyan, Eduard (GymMU)
+export function aufgabe16(args) {
+  const input = args
+  const result = input.split('$')
+  for (let i = 0; i < input.length; i++) {
+    result.push(input[i])
+    if (input[i] === "$") {
+      if (input.length - 1 === i) {
+        return [result.join]
+      } else {
+        return [result.join]
+      }
+    }
+  }
+  return [result.join(""), false]
+}
+ 
+
+
+export function aufgabe17(args) {
+  const input = args
   const result = input.split(',')
  
-  
- for (let i = 0; i < result.length - 1; i++) {
- for (let j = 0; j < result.length - 1 - i; j++) {
- if (result[j] > result[j + 1]) {
-        
- [result[j], result[j + 1]] = [result[j + 1], result[j]]
- }
- }
- }
- return result.join(',')
- }
+  // Bubble Sort zum Sortieren der Elemente der Liste
+  for (let i = 0; i < result.length - 1; i++) {
+    for (let j = 0; j < result.length - 1 - i; j++) {
+      if (result[j] > result[j + 1]) {
+        // Tauscht die Elemente aus, wenn sie in der falschen Reihenfolge sind
+        [result[j], result[j + 1]] = [result[j + 1], result[j]]
+      }
+    }
+  }
+ 
+  return result.join(',')
+}
 
 
 
