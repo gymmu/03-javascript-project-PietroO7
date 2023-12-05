@@ -215,10 +215,10 @@
  export function aufgabe12(args) {
   const input = args;
   const result = []
-// zähle ab 
+
  for (let i = 0; i < input.length; i++) {
  const currentElement = input[i];
-    
+//schaue ob das aktuelle Element ein "e" ist
  if (currentElement === "e") {
  return i
  }
@@ -228,17 +228,21 @@
 
 
 
+
  export function aufgabe13(args) {
   const input = args;
   let positionOfLastE = -1;
-
+// Durchlaufe jeden Buchstaben im Text.
  for (let i = 0; i < input.length; i++) {
+// Aktuelles Zeichen im Text.
   const currentElement = input[i];
-
+// Überprüfe, ob das aktuelle Zeichen ein "e" ist.
  if (currentElement === "e") {
+// ändere die Position des letzten "e" auf die aktuelle Position.
     positionOfLastE = i;
  }
  }
+// Gib die Position des letzten "e" zurück
  return positionOfLastE;
  }
 
@@ -268,13 +272,13 @@ return -1;
   const result = [];
 
  for (let i = 0; i < input.length; i++) {
-  const currentChar = input[i];
+  const currentElement = input[i];
 
 // Schleife soll anhalten sobald wenn ein Leerzeichen auftritt
- if (currentChar === ' ') {
+ if (currentElement === ' ') {
  break;
  }
-result.push(currentChar);
+result.push(currentElement);
  }
  return result.join('');
  }
@@ -305,7 +309,6 @@ result.push(currentChar);
  }
  }
  }
- 
  return result.join(',')
  }
 
@@ -389,17 +392,17 @@ export function aufgabe24(args) {
 // Überprüfe, ob die Eingabe mindestens ein Zeichen hat
   if (input.length > 0) {    
 // Vertausche das erste und das letzte Zeichen
-  const firstChar = input[0];
-  const lastChar = input[input.length - 1];
+  const firstElement = input[0];
+  const lastElement = input[input.length - 1];
 
- result.push(lastChar);
+ result.push(lastElement);
 
 // Füge die restlichen Zeichen (ohne das letzte) hinzu
 for (let i = 1; i < input.length - 1; i++) {
     result.push(input[i]);
   }
 
-    result.push(firstChar);
+    result.push(firstElement);
   }
 
 return result.join('');
@@ -438,10 +441,10 @@ export function aufgabe26 (args) {
  if (input.length === 0) return false;
 
  for (let i = 0; i < input.length; i++) {
-   const currentChar = input[i];
+   const currentElement = input[i];
 
 // Überprüfe, ob das ASCII-Zeichen eine Zahl ist (zwischen 48 und 57)
-    const asciiCode = currentChar.charCodeAt(0);
+    const asciiCode = currentElement.charCodeAt(0);
  if (asciiCode < 48 || asciiCode > 57) {
  return false
   }
