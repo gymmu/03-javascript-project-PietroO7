@@ -306,25 +306,6 @@ result.push(currentElement);
 
 
 
-[09:27] Gabrielyan, Eduard (GymMU)
-export function aufgabe16(args) {
-  const input = args
-  const result = input.split('$')
-  for (let i = 0; i < input.length; i++) {
-    result.push(input[i])
-    if (input[i] === "$") {
-      if (input.length - 1 === i) {
-        return [result.join]
-      } else {
-        return [result.join]
-      }
-    }
-  }
-  return [result.join(""), false]
-}
- 
-
-
 export function aufgabe17(args) {
   const input = args
   const result = input.split(',')
