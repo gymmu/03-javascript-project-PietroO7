@@ -286,9 +286,9 @@ result.push(currentElement);
  return result.join('');
  }
 
+ 
 
 //Diesen Code habe ich versucht mit Chatgpt zu machen, hat nicht geklapt :( .
-
  export function aufgabe16(args) {
   const input = args
   const result = input.split('$')
@@ -325,15 +325,6 @@ export function aufgabe17(args) {
 
 
 
-export function aufgabe18 (args) {
-  const input = args
-  const result = []
-
-  return result.join("")
-}
-
-
-
 export function aufgabe19(args) {
   const input = args;
   const result = [];
@@ -345,49 +336,6 @@ export function aufgabe19(args) {
   result.push(currentElement, currentElement);
 }
  return result.join('');
-}
-
-
-
- export function aufgabe20 (args) {
-  const input = args
-  const result = []
- for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-    
-  }
- return result.join("")
-  }
-
-
-
- export function aufgabe21 (args) {
-  const input = args
-  const result = []
-  
- return result.join("")
-  }
- 
-
-
-export function aufgabe22 (args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-  }
- return result.join("")
-  }
-
-
-
- export function aufgabe23 (args) {
-  const input = args
-  const result = []
- for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]  
-  }
- return result.join("")
 }
 
 
@@ -411,30 +359,6 @@ for (let i = 1; i < input.length - 1; i++) {
     result.push(firstElement);
   }
 return result.join('');
-}
-
-
-
-export function aufgabe25 (args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-    
-  }
-  return result.join("")
-}
-
-
-
-export function aufgabe26 (args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-    
-  }
-  return result.join("")
 }
 
 
