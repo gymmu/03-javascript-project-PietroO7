@@ -319,7 +319,6 @@ export function aufgabe17(args) {
       }
     }
   }
- 
   return result.join(',')
 }
 
@@ -367,10 +366,7 @@ export function aufgabe19(args) {
   
  return result.join("")
   }
- for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-  }
-
+ 
 
 
 export function aufgabe22 (args) {
@@ -378,7 +374,6 @@ export function aufgabe22 (args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
   }
  return result.join("")
   }
@@ -412,10 +407,8 @@ export function aufgabe24(args) {
 for (let i = 1; i < input.length - 1; i++) {
     result.push(input[i]);
   }
-
     result.push(firstElement);
   }
-
 return result.join('');
 }
 
@@ -464,36 +457,27 @@ export function aufgabe26 (args) {
   }
 
 
+  
 
- export function aufgabe28 (args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+
+
+  export function bubbleSort(inputText) {
+    const text = inputText;
+    const zeichenListe = text.split(""); // Teile den Text auf, um die Elemente effektiv zu tauschen
     
-  }
- return result.join("")
-  }
-
-
-
-  export function bubbleSort(args) {
-    const text = args
-    const list = text.split("") // Mit deisem Code wandlet man den Text um, somit wird das Element vertauscht
-   
-    for (let i = 0; i < list.length - 1; i++) { //Schleife drchläuft die Eingabeleiste
-      const currentElement = list[i] //Das Aktuelle Element in der Eingabeleiste
-      const nextElement = list[i + 1] //Das nächste Element in der Eingabeleiste
-      if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-        //Da die Reihenfolge nicht richtig ist, müssen Elemetne vertauscht werden.
-        const tmp = list[i + 1]
-        list[i + 1] = list[i] //vertauschen der ELemente in der Eingabeleiste
-        list[i] = tmp
-        i = -1 //es fängt von vorne an
+    for (let i = 0; i < zeichenListe.length - 1; i++) { // Durchlaufe den Eingabetext
+      const aktuellesZeichen = zeichenListe[i]; // Aktuelles Zeichen im Eingabetext
+      const naechstesZeichen = zeichenListe[i + 1]; // Nächstes Zeichen im Eingabetext
+      if (aktuellesZeichen.charCodeAt(0) > naechstesZeichen.charCodeAt(0)) {
+        // Da die Reihenfolge nicht korrekt ist, müssen die Elemente getauscht werden
+        const tmp = zeichenListe[i + 1];
+        zeichenListe[i + 1] = zeichenListe[i]; // Tausche die Elemente im Eingabetext
+        zeichenListe[i] = tmp;
+        i = -1; // Beginne von vorne
       }
     }
-    const result = list.join("") //die sortierte Eingabeleiste wird wieder zu einem Text zusammengefügt
-    console.log(result)
+    const sortiertesErgebnis = zeichenListe.join(""); // Füge den sortierten Eingabetext wieder zusammen
+    console.log(sortiertesErgebnis);
    
-    return result //rückgabe des sortierten texts
-  }
+    return sortiertesErgebnis; // Gib den sortierten Text zurück
+}
