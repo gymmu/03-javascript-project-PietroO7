@@ -474,3 +474,26 @@ export function aufgabe26 (args) {
   }
  return result.join("")
   }
+
+
+
+  export function bubbleSort(args) {
+    const text = args
+    const list = text.split("") // Mit deisem Code wandlet man den Text um, somit wird das Element vertauscht
+   
+    for (let i = 0; i < list.length - 1; i++) { //Schleife drchläuft die Eingabeleiste
+      const currentElement = list[i] //Das Aktuelle Element in der Eingabeleiste
+      const nextElement = list[i + 1] //Das nächste Element in der Eingabeleiste
+      if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+        //Da die Reihenfolge nicht richtig ist, müssen Elemetne vertauscht werden.
+        const tmp = list[i + 1]
+        list[i + 1] = list[i] //vertauschen der ELemente in der Eingabeleiste
+        list[i] = tmp
+        i = -1 //es fängt von vorne an
+      }
+    }
+    const result = list.join("") //die sortierte Eingabeleiste wird wieder zu einem Text zusammengefügt
+    console.log(result)
+   
+    return result //rückgabe des sortierten texts
+  }
