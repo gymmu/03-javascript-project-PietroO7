@@ -287,6 +287,7 @@ result.push(currentElement);
  }
 
 
+//Diesen Code habe ich versucht mit Chatgpt zu machen, hat nicht geklapt :( .
 
  export function aufgabe16(args) {
   const input = args
@@ -455,9 +456,6 @@ export function aufgabe26 (args) {
   }
  return true
   }
-
-
-  
 
 
 
