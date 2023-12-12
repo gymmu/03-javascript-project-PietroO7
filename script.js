@@ -345,18 +345,34 @@ export function aufgabe20 (args) {
   const result = []
 
 
-  for(let i =0; i < input.length; i++) {
-    const currentElement = input[i] 
+for(let i =0; i < input.length; i++) {
+   const currentElement = input[i] 
 
-    if (currentElement === ".") {
-      if (input[i+1] === " ")  {
-        return true
-      }
+if (currentElement === ".") {
+if (input[i+1] === " ")  {
+return true
+}
 
-    }
+}
   
 }
-  return false
+return false
+}
+
+
+
+//Ist wie Aufgabe 13
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+
+  let positionOfLastE = -1
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[input.length - i - 1]
+    result.push(currentElement)
+  }
+  return result.join("")
 }
 
 
