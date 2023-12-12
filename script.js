@@ -169,25 +169,25 @@
 
 
  export function aufgabe10(args) {
-  const input = args;
+  const input = args
 //überprüfe ob die Eingabe nicht genau 7 Zeichen lang ist, Ja=False
- if (input.length !== 7) return false;
+ if (input.length !== 7) return false
  //überprüfe ob das erste Zeichen kein # ist Ja=False
- if (input[0] !== "#") return false;
+ if (input[0] !== "#") return false
 
  for (let i = 1; i < input.length; i++) {
-  const currentElement = input[i];
+  const currentElement = input[i]
 // Die ASCII-Wert des aktuellen Elements wird ermittelt
-  const ascii = currentElement.charCodeAt(0);
+  const ascii = currentElement.charCodeAt(0)
 //mach nichts es ist eine Zahl
  if (48 <= ascii && ascii <= 57) {
 //mach nichts ist A-F
   } else if (65 <= ascii && ascii <= 70) {
   } else {
-    return false;
+    return false
   }
   }
-  return true;
+  return true
   }
 
 
@@ -208,82 +208,82 @@
   return ascii
   }
   return null
-}
+  }
 
 
 
  export function aufgabe12(args) {
-  const input = args;
+  const input = args
   const result = []
 
  for (let i = 0; i < input.length; i++) {
- const currentElement = input[i];
+ const currentElement = input[i]
 //schaue ob das aktuelle Element ein "e" ist
  if (currentElement === "e") {
  return i
  }
  }
- return -1;
+ return -1
  }
 
 
 
 
  export function aufgabe13(args) {
-  const input = args;
+  const input = args
   let positionOfLastE = -1;
 // Durchlaufe jeden Buchstaben im Text.
  for (let i = 0; i < input.length; i++) {
 // Aktuelles Zeichen im Text.
-  const currentElement = input[i];
+  const currentElement = input[i]
 // Überprüfe, ob das aktuelle Zeichen ein "e" ist.
  if (currentElement === "e") {
 // ändere die Position des letzten "e" auf die aktuelle Position.
-    positionOfLastE = i;
+    positionOfLastE = i
  }
  }
 // Gib die Position des letzten "e" zurück
- return positionOfLastE;
+ return positionOfLastE
  }
 
 
 
 export function aufgabe14(args) {
- const input = args;
- let count = 0;
+ const input = args
+ let count = 0
 
 for (let i = 0; i < input.length; i++) {
- const currentElement = input[i];
+ const currentElement = input[i]
 if (currentElement === "e") {
 // Erhöhe den Zähler für "e".
-   count = count + 1;
+   count = count + 1
 // Überprüfe, ob es das dritte "e" ist.
 if (count === 3) {
 // Gib die Position des dritten "e" zurück.
-return i;
+return i
  }
  }
  }
 // Falls es kein drittes "e" gibt, gib -1 zurück.
-return -1;
+return -1
  }
 
 
 
  export function aufgabe15(args) {
-  const input = args;
-  const result = [];
+  const input = args
+  const result = []
 
  for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i];
+  const currentElement = input[i]
 
 // Schleife soll anhalten sobald wenn ein Leerzeichen auftritt
  if (currentElement === ' ') {
- break;
+ break
  }
-result.push(currentElement);
+result.push(currentElement)
  }
- return result.join('');
+ return result.join('')
  }
 
  
@@ -326,51 +326,72 @@ export function aufgabe17(args) {
 
 
 export function aufgabe19(args) {
-  const input = args;
-  const result = [];
+  const input = args
+  const result = []
 
   for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i];
+  const currentElement = input[i]
     
 // Füge jedes Zeichen zweimal hinzu
-  result.push(currentElement, currentElement);
+  result.push(currentElement, currentElement)
 }
- return result.join('');
+ return result.join('')
+}
+
+
+//Ist fast wie Aufgabe 7
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+
+
+  for(let i =0; i < input.length; i++) {
+    const currentElement = input[i] 
+
+    if (currentElement === ".") {
+      if (input[i+1] === " ")  {
+        return true
+      }
+
+    }
+  
+}
+  return false
 }
 
 
 
 export function aufgabe24(args) {
-  const input = args;
-  const result = [];
+  const input = args
+  const result = []
 
 // Überprüfe, ob die Eingabe mindestens ein Zeichen hat
   if (input.length > 0) {    
 // Vertausche das erste und das letzte Zeichen
-  const firstElement = input[0];
-  const lastElement = input[input.length - 1];
+  const firstElement = input[0]
+  const lastElement = input[input.length - 1]
 
- result.push(lastElement);
+ result.push(lastElement)
 
 // Füge die restlichen Zeichen (ohne das letzte) hinzu
 for (let i = 1; i < input.length - 1; i++) {
-    result.push(input[i]);
+    result.push(input[i])
   }
-    result.push(firstElement);
+    result.push(firstElement)
   }
-return result.join('');
+return result.join('')
 }
 
 
 
  export function aufgabe27(args) {
-  const input = args;
-  const result = [];
+  const input = args
+  const result = []
 
- if (input.length === 0) return false;
+ if (input.length === 0) return false
 
  for (let i = 0; i < input.length; i++) {
-   const currentElement = input[i];
+   const currentElement = input[i]
 
 // Überprüfe, ob das ASCII-Zeichen eine Zahl ist (zwischen 48 und 57)
     const asciiCode = currentElement.charCodeAt(0);
