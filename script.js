@@ -325,6 +325,38 @@ export function aufgabe17(args) {
 
 
 
+export function aufgabe18(args) {
+  const input = args
+  const result = []
+  let name = ""
+  let alter = ""
+
+  for (let i = 0; i < input.length; i++) {
+    const currentCharCode = input.charCodeAt(i)
+
+    // Prüft, ob das Zeichen ein Buchstabe ist
+    if ((currentCharCode >= 65 && currentCharCode <= 90) || (currentCharCode >= 97 && currentCharCode <= 122)) {
+      name += input[i]
+    }
+    // Prüft, ob das Zeichen eine Ziffer ist
+    else if (currentCharCode >= 48 && currentCharCode <= 57) {
+      alter += input[i]
+    }
+  }
+
+  if (name) {
+    result.push("Sie heissen " + name)
+  }
+
+  if (alter) {
+    result.push(" und sind " + alter + " Jahre alt")
+  }
+
+  return result.join("")
+}
+
+
+
 export function aufgabe19(args) {
   const input = args;
   const result = [];
